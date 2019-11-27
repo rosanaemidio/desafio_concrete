@@ -1,0 +1,30 @@
+.search{
+    display: flex;
+    justify-content: space-around;
+        /* justify-content: center;
+    flex-direction: column; */ 
+}
+.search>h1{
+    font-size: 40px;
+}
+.search__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.search__home{
+    width: 40vw;
+    height: 40px;
+}
+
+.btn__search{
+    background-color: blueviolet;
+    /* background-image:  "../../assets/icons/Search-icon.png"; */
+    width: 45px;
+    height: 40px;
+}
+
+
+
+

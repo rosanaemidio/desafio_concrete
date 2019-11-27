@@ -1,0 +1,7 @@
+.btn__search{
+    background-color: blueviolet;
+    background-image:url("../../assets/icons/Search-Icon.png") ;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}

@@ -1,12 +1,9 @@
 import React from 'react'
 
-function Input (props) {
+import './Input.css'
+function Input(){
     return(
-        <input type='text' placeholder='Digite aqui'></input>
-
+        <input type='text' placeholder='Digite o nome do repositório' className='search__home'></input>
     )
 }
-
-
-
-export default Input;
+export default Input

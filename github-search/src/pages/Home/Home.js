@@ -1,14 +1,17 @@
-import React, { Fragment } from 'react'
-import Input from '../../components/Input/Input'
-import Button from '../../components/Button/Button'
+import React from 'react'
+import Search from '../../components/Search/Search'
+
+
 
 function Home (){
     return(
-        <Fragment>
-            <Input />
-            <Button />
+        <div className="home" >
 
-        </Fragment>
+            <Search 
+            classe='search'
+            />
+
+        </div>
     )
     
     
