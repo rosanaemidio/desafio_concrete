@@ -7,8 +7,7 @@ import './Search.css'
 function Search(props){
 
     return(
-        <div className={props.classe}>
-            
+        <div className={props.classe}>           
             <h1>GITHUB Search</h1>
             <div className='search__div'> 
                 <Input />
