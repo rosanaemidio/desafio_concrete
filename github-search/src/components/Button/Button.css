@@ -1,7 +1,12 @@
 .btn__search{
     background-color: blueviolet;
-    background-image:url("../../assets/icons/Search-Icon.png") ;
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
+    border-radius: 2px;
+    /* box-shadow: rgba(0, 0, 0, 0.4); */
+     
+}
+.btn__search-icone{
+    width: 30px;
 }

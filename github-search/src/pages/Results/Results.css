@@ -9,3 +9,14 @@
    justify-content: center;
    flex-direction: column;    
 }
+.search__results >h1{
+   font-size: 40px;
+   font-family: Monaco;
+   text-align: center;
+}
+
+.search__results >h1 >span{
+   font-family: Raleway;
+   font-weight: 200;
+   font-style: italic;
+}

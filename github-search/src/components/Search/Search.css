@@ -1,8 +1,5 @@
-@font-face{
-    font-family: "Raleway-BoldItalic" ;
-    src:url(../../assets/fonts/Raleway-BoldItalic.ttf);
-
-}
+@import url(//db.onlinewebfonts.com/c/440785c689da19fbbdb1346932c8c029?family=Monaco);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200i,300,400&display=swap');
 
 
 .search{
@@ -12,27 +9,38 @@
     flex-direction: column; 
     align-items: center;
 }
-.search>h1{
-    font-size: 40px;
-    font-family: "Raleway-BoldItalic";
+
+.search >h1{
+    font-size: 60px;
+    font-family: Monaco;
     text-align: center;
+    margin: 0;
 }
+
+.search >h1 >span{
+    font-family: Raleway;
+    font-weight: 200;
+    font-style: italic;
+}
+
+
 .search__div{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
+
 .search__home{
-    width: 40vw;
-    height: 40px;
+    width: 50vw;
+    height: 50px;
 }
 
 .btn__search{
-    background-color: blueviolet;
+    background-color: #ac53f2;
     /* background-image:  "../../assets/icons/Search-icon.png"; */
-    width: 45px;
-    height: 40px;
+    width: 100px;
+    height: 50px;
 }
 
 
