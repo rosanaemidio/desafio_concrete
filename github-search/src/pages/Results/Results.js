@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from '../../components/Search/Search'
 
+import './Results.css'
 class Results extends React.Component{
     constructor(){
         super()
@@ -10,10 +11,12 @@ class Results extends React.Component{
     }
 
     render(){
-        return(                      
-                 <Search 
-                    classe='search__nav'
-                />
+        return(   
+            <div className='search__container'>
+                <Search 
+                   classe='search__results'
+               />
+            </div>                   
 
         )
     }
