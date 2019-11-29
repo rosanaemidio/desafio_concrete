@@ -1,4 +1,7 @@
 import React from 'react'
+import Username from './Username/Username';
+import Informations from './Informations/Informations';
+import Avatar from './Avatar/Avatar'
 
 class User extends React.Component{
     constructor(){
@@ -9,21 +12,14 @@ class User extends React.Component{
     }
 
     render(){
-        const{img, name, title} = props;
         return(
-            <section>
-                <div>
-                    <img src={img}></img>
-                    <h3>{name}</h3>
-                    <p>{title}</p>
-                </div>
-                <div>
-                    <img></img>
-                    <p></p>
-                </div>
-            </section>
+            <aside>
+                <Avatar />
+                <Username />
+                <Informations/>
+            </aside>
         )
     }
 }
 
-export default Users
+export default User
