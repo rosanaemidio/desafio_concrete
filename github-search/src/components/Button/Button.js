@@ -3,9 +3,9 @@ import  icone from '../../assets/icons/Search-Icon.png'
 
 import './Button.css'
 
-function Button(){
+function Button(props){
     return(
-            <button type='img' placeholder='Digite o nome do Repositório aqui'className='btn__search' ><img className='btn__search-icone' src={icone}/>
+            <button className='btn__search' onClick={props.click}><img className='btn__search-icone' src={icone}/>
             </button>
     )
 }

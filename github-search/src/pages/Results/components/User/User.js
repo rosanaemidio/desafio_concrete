@@ -3,23 +3,17 @@ import Username from './Username/Username';
 import Informations from './Informations/Informations';
 import Avatar from './Avatar/Avatar'
 
-class User extends React.Component{
-    constructor(){
-        super()
-        this.state={
-
-        }
-    }
-
-    render(){
-        return(
-            <aside>
-                <Avatar />
-                <Username />
+function User (props) {
+    return(
+        
+        <aside >
+            <Avatar   />
+            <Username  />
+            <div>
                 <Informations/>
-            </aside>
-        )
-    }
+            </div>
+        </aside>
+    )
 }
 
 export default User
