@@ -34,6 +34,7 @@
 .search__home{
     width: 50vw;
     height: 50px;
+    border-radius:4px;
 }
 
 .btn__search{

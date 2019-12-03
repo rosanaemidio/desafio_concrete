@@ -20,7 +20,7 @@ class Results extends React.Component{
      }
     render() {
         console.log(this.props)
-        // const { login, name, avatar_url } = this.state.user;
+        const { login, name, avatar_url } = this.state.user;
         return(   
             <Fragment>
                 <div className='search__container'>
@@ -29,7 +29,8 @@ class Results extends React.Component{
                     />
                 </div>                   
                 <section className=''>
-                    <User/>
+                    <User
+                    profile={avatar_url}/>
                     <Repositories />
               
                 </section>
