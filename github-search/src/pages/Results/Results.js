@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Search from '../../components/Search/Search'
-import User from './components/User/User'
+import Usuario from './components/User/Usuario'
 import Repositories from './components/Repositories/Repositories'
 import { getRepos } from  '../../services/api/users'
 
@@ -29,7 +29,7 @@ class Results extends Component{
                     />
                 </div>                   
                 <aside className=''>
-                    <User
+                    <Usuario
                     profile={avatar_url}
                     name={name}
                     login={login}/>             

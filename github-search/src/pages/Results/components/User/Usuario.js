@@ -6,7 +6,7 @@ import followers from '../../../../assets/icons/followers-icon.png'
 import location from '../../../../assets/icons/location -con.png'
 import star from '../../../../assets/icons/star-icon.png'
 
-function User (props) {
+function Usuario (props) {
     
     return(
         
@@ -38,4 +38,4 @@ function User (props) {
     )
 }
 
-export default User
+export default Usuario
