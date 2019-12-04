@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import Search from '../../components/Search/Search'
 import User from './components/User/User'
 import Repositories from './components/Repositories/Repositories'
 import { getRepos } from  '../../services/api/users'
 
 import './Results.css'
-class Results extends React.Component{
+class Results extends Component{
     constructor(){
         super()
         this.state={
@@ -18,9 +18,9 @@ class Results extends React.Component{
                 this.setState({repos:res.data})
             })
      }
-    render() {
+    render(){
         console.log(this.props)
-        const { login, name, avatar_url } = this.state.user;
+        const { name, avatar_url, login } = this.state.user;
         return(   
             <Fragment>
                 <div className='search__container'>
@@ -28,16 +28,17 @@ class Results extends React.Component{
                     classe='search__results'
                     />
                 </div>                   
-                <section className=''>
+                <aside className=''>
                     <User
-                    profile={avatar_url}/>
+                    profile={avatar_url}
+                    name={name}
+                    login={login}/>             
+                </aside>
+                <section>
                     <Repositories />
-              
                 </section>
             </Fragment>
         )
-    }
-    
-
+    }    
 }
 export default Results;
