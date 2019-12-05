@@ -9,6 +9,7 @@ class Home extends Component{
         super()
         this.state={
             value:'',
+            user:{}
         }
     }
 
