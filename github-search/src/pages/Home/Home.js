@@ -9,7 +9,8 @@ class Home extends Component{
         super()
         this.state={
             value:'',
-            user:{}
+            user:{},
+            error: ''
         }
     }
 
@@ -17,7 +18,7 @@ class Home extends Component{
         this.setState({
           value: param.target.value
         })
-        console.log(param.target.value)
+
       }
     
       searchUser = () => { 
@@ -31,23 +32,27 @@ class Home extends Component{
                   user: this.state.user
               }
           })
-        }).catch(err => { })
-      }
+        })
+        .catch(err => {
 
-     
+          this.props.history.push({
+            pathname: '/results',
+            state: {
+             error: "User not found :("
+            }
+          })
+        })
+      }     
 
     render(){
-        return(
-        
+        return(       
             <div className="home" >
                 <Search 
                 classe='search'
                 change={this.valorInput}
                 click={this.searchUser}
                 />
-
-            </div>
-           
+            </div>          
         )   
     }
 }

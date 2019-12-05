@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Search from '../../components/Search/Search'
 import User from './components/User/User'
 import Repositories from './components/Repositories/Repositories'
+import { getUsers } from '../../services/api/users'
 import { getRepos } from  '../../services/api/users'
 
 import './Results.css'
@@ -9,6 +10,8 @@ class Results extends Component{
     constructor(){
         super()
         this.state = {
+            value:'',
+            error:'' ,           
             repos:[]
         }
     }
@@ -18,6 +21,7 @@ class Results extends Component{
                 this.setState({repos:res.data})
             })
      }
+     
     render(){
         console.log(this.props)
         const { name, avatar_url, login, public_repos, following, followers, location, company } = this.props.location.state.user;
@@ -26,25 +30,29 @@ class Results extends Component{
                 <div className='search__container'>
                     <Search 
                     classe='search__results'
+                    change={this.valorInput}
+                    click={this.searchUser}
                     />
-                </div>                   
-                <aside className='aside_result'>
-                    <User
-                    profile={avatar_url}
-                    name={name}
-                    login={login}
-                    info = {followers}
-                    info = {location}
-                    info = {public_repos}
-                    info = {following}
-                    info = {company}
-                    
-                    />  
+                </div>    
+                <div>
+                    <section className='aside_result'>
+                        <User
+                        profile={avatar_url}
+                        name={name}
+                        login={login}
+                        children = {followers}
+                        children = {location}
+                        children = {public_repos}
+                        children = {following}
+                        children = {company}
+                        
+                        />  
 
-                </aside>
-                <section>
-                    <Repositories />
-                </section>
+                    </section>
+                    <section>
+                        <Repositories />
+                    </section>
+                </div>               
             </Fragment>
         )
     }    

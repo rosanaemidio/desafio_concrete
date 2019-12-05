@@ -22,27 +22,27 @@ function User (props) {
                 <Informations
                 icon = {followers}
                 alt={props.alt}
-                info = {props.info}
+                children = {props.children}
                 />
                  <Informations
                 icon = {star}
                 alt={props.alt}
-                info = {props.info}
+                children = {props.children}
                 />
                  <Informations
                 icon = {location}
                 alt ={props.alt}
-                info = {props.info}
+                children = {props.children}
                 />
                  <Informations
                 icon = {organization}
                 alt = {props.alt}
-                info = {props.info}
+                children = {props.children}
                 />
                   <Informations
                 icon = {repositorie}
                 alt ={props.alt}
-                info = {props.info}
+                children = {props.children}
                 />
             </div>
         </Fragment>
