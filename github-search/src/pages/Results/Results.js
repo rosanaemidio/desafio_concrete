@@ -15,6 +15,22 @@ class Results extends Component{
             repos:[]
         }
     }
+    componentDidMount(){   
+        if(this.props.location.state){
+            if(this.props.location.state.user)  {
+                this.setState({
+                    user: this.props.location.state.user,
+                })
+                this.getReposData(this.props.location.state.user.login)
+                }  
+                if(this.props.location.state.error){
+                    this.setState({
+                        error: 'Not found'
+                })
+            }
+        }
+    }
+
 
     searchRepos = () =>{
             getRepos().then(res => {
@@ -47,7 +63,6 @@ class Results extends Component{
                         children = {company}
                         
                         />  
-
                     </section>
                     <section>
                         <Repositories />
