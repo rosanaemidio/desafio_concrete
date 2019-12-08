@@ -13,7 +13,7 @@ import './User.css'
 function User (props) {
     const {profile, name, login, textOrganization, textLocation, textStar, textRepositories, textFollowers } = props
     return(       
-        <div className= 'container__profile' >
+        <div className= 'container__user' >
             <Avatar  
             profile = {profile} />
             <Username  

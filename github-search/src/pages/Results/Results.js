@@ -16,21 +16,6 @@ class Results extends Component{
             error: ''
         }
     }
-    componentDidMount(){   
-        if(this.props.location.state){
-            if(this.props.location.state.user)  {
-                this.setState({
-                    user: this.props.location.state.user,
-                })
-                this.getReposData(this.props.location.state.user.login)
-                }  
-                if(this.props.location.state.error){
-                    this.setState({
-                        error: 'Not found'
-                })
-            }
-        }
-    }
 
 
     componentDidMount(){   
@@ -63,7 +48,7 @@ class Results extends Component{
                 error:''
             })   
         })
-        .catch((err) => {
+        .catch(error => {
             this.setState({
                 error: 'Not found'
             })
@@ -78,7 +63,7 @@ class Results extends Component{
             })
      }
 
-     searchUser = (value) =>{
+     searchUser = value =>{
         this.getUser(this.state.value);
         this.searchRepos(this.state.value);
     }
@@ -97,33 +82,31 @@ class Results extends Component{
                     click={this.searchUser}
                     />                  
                 {!error ?
-                <main className='container_results'>
-
+                <div className='container_results'>
                         <User
                         profile={avatar_url}
                         name={name}
                         login={login}
-                        info = {company}
-                        info = {location}
-                        info = {following}
-                        info = {public_repos}
-                        info = {followers}
+                        textOrganization={company}
+                        textLocation={location}
+                        textStar={followers}
+                        textRepositories={public_repos}
+                        textFollowers={following}
                         />  
                         <div className='container_repo'>
                             {this.state.repos.sort((a, b) => b.stargazers_count - a.stargazers_count).map(repo =>                    
                                 <Fragment  key= {repo.id}>
-                                <Repositories
-                                repoName = {repo.name}
-                                repoDescription={repo.description}
-                                repoStargazersCount={repo.stargazers_count}            
-                                />          
+                                    <Repositories
+                                    repoName = {repo.name}
+                                    repoDescription={repo.description}
+                                    repoStargazersCount={repo.stargazers_count}            
+                                    />          
                                                         
                                 </Fragment>                  
                              )}                      
                         </div>
-                </main>
-                : <NotFound classnotFound = 'notFound' />
-                }           
+                </div>
+                : <NotFound /> }           
             </Fragment>
         )
     }    

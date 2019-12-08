@@ -4,7 +4,7 @@
 }
 
 .container__icon > img {
-    margin: 0px;
+    /* margin: 0px; */
 }
     
 
@@ -17,6 +17,7 @@
 .icon__repositories {
     width: 25.5px;
     height: 24.5px;
+    margin-top: 15px;
 }
 
 .icon__text {

@@ -10,15 +10,18 @@ const Repositories = props => {
 
         return(
             <main className='container_repos'>
-                <Username
-                    name= {repoName}
-                    login= {repoDescription}
-                    description_title='repos_title'
-                    description_p='repos_p'/>
+                
+                    <Username
+                        name= {repoName}
+                        login= {repoDescription}
+                        description_title='repos_title'
+                        description_p='repos_p'/>
+                
                 <div className= 'star'>
                     <Informations
                     icon = {Star}
-                    alt = 'organization icon'>
+                    alt = 'organization icon'
+                    class_icon= 'icon__repositories'>
                     {repoStargazersCount} </Informations>
                 </div>
             </main>
