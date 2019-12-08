@@ -9,21 +9,22 @@ class Home extends Component{
         super()
         this.state={
             value:'',
-            user:{}
+            user:{},
+            error: ''
         }
     }
 
-    valorInput = (param) => {
+    valueInput = (value) => {
         this.setState({
-          value: param.target.value
+          value: value.target.value
         })
-        console.log(param.target.value)
       }
     
       searchUser = () => { 
         getUsers(this.state.value).then((res) => {
           this.setState({
-            user: res.data
+            user: res.data,
+            error:''
           })
           this.props.history.push({
               pathname: '/results', 
@@ -31,21 +32,29 @@ class Home extends Component{
                   user: this.state.user
               }
           })
-        }).catch(err => { })
+        }).catch(err => { 
+          this.setState({
+            error:'User not found'
+          })
+          this.props.history.push({
+            pathname: '/results',
+            state:{
+              error:this.state.error
+            }
+          })
+        })
       }
 
      
 
     render(){
-        return(
-        
+        return(  
             <div className="home" >
                 <Search 
                 classe='search'
-                change={this.valorInput}
+                change={this.valueInput}
                 click={this.searchUser}
                 />
-
             </div>
            
         )   

@@ -1,11 +1,6 @@
-.avatar{
-    border-color: blueviolet;
-    width: 300px;
-    
-}
 
-.avatar>img{
-    width: 300px;
-    height: 300px;
-    margin:30px;
+.avatar{
+    width: 280px;
+    height: 280px;
+    border-radius: 2px;
 }

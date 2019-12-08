@@ -37,3 +37,18 @@
    color: #000000;
    margin-top: 12px;
 }
+  .photo_profile{
+   width: '280px';
+   height: '280px'
+ }
+
+ .container_results{
+   display: flex;
+   
+ }
+
+.container_repo{
+ width: 55%;
+ margin: 0px;
+ padding: 20px;
+}

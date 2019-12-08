@@ -1,11 +1,9 @@
-..container__info {
+.container__icon {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     margin-top: 15px; 
 }
 
-.container__info > img {
+.container__icon > img {
     margin: 0px;
 }
     
@@ -21,7 +19,7 @@
     height: 24.5px;
 }
 
-.info__text {
+.icon__text {
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-size: 20px;
