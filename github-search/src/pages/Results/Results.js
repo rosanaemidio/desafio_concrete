@@ -16,6 +16,22 @@ class Results extends Component{
             error: ''
         }
     }
+    componentDidMount(){   
+        if(this.props.location.state){
+            if(this.props.location.state.user)  {
+                this.setState({
+                    user: this.props.location.state.user,
+                })
+                this.getReposData(this.props.location.state.user.login)
+                }  
+                if(this.props.location.state.error){
+                    this.setState({
+                        error: 'Not found'
+                })
+            }
+        }
+    }
+
 
     componentDidMount(){   
         if(this.props.location.state){

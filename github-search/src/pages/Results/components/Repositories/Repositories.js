@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Username from '../User/Username/Username'
 import Informations from '../User/Informations/Informations'
 import Star from '../../../../assets/icons/star-icon.png'

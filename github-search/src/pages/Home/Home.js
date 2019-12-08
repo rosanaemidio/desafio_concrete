@@ -1,5 +1,5 @@
-import React, { Component }from 'react'
-import Search from '../../components/Search/Search'
+import React, { Component } from 'react';
+import Search from '../../components/Search/Search';
 import { getUsers } from '../../services/api/users'
 
 import './Home.css'
@@ -31,29 +31,27 @@ class Home extends Component{
               state: {
                   user: this.state.user
               }
-          })
+          });
         }).catch(err => { 
           this.setState({
             error:'User not found'
           })
           this.props.history.push({
             pathname: '/results',
-            state:{
-              error:this.state.error
+            state: {
+             error: "User not found :("
             }
           })
         })
-      }
-
-     
+      }     
 
     render(){
         return(  
             <div className="home" >
-                <Search 
-                classe='search'
-                change={this.valueInput}
-                click={this.searchUser}
+                <Search
+                  classe='search'
+                  change={this.valueInput}
+                  click={this.searchUser}
                 />
             </div>
            
