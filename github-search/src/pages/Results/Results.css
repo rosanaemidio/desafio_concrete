@@ -1,0 +1,55 @@
+.search__results{
+   display: flex;
+   justify-content: space-evenly ;
+}
+
+.search__container{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;    
+}
+.search__results >h1{
+   font-size: 40px;
+   font-family: Monaco;
+   text-align: center;
+}
+
+.search__results >h1 >span{
+   font-family: Raleway;
+   font-weight: 200;
+   font-style: italic;
+}
+
+.results__repos{
+   display:flex;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 100;
+   font-size: 20px;
+   margin-top: 7px;
+   color: #5c5c5c;
+}
+
+.profile-title {
+   font-family: 'Raleway', sans-serif;
+   font-weight: 300;
+   font-size: 35px;
+   color: #000000;
+   margin-top: 12px;
+}
+  .photo_profile{
+   width: '280px';
+   height: '280px'
+ }
+
+ .container_results{
+   display: flex;
+   /* justify-content: space-around; */
+   
+ }
+
+.container_repo{
+ width: 55%;
+ margin: 0px;
+ padding: 20px;
+}

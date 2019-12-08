@@ -1,0 +1,12 @@
+.container__notfound{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end
+}
+
+.container__notfound > span {
+    font-family: Raleway;
+    font-size: 40px;    
+    color: #ac53f2;
+  }
