@@ -2,7 +2,9 @@
 O objetivo do desafio é encontrar usuários do Github e seus repositórios, utilizando dados da API disponível.
 
 ## Construido com
-React.js - Create React App. axios react-router-dom
+React.js - Create React App. 
+axios 
+react-router-dom
 
 ## CSS
 Fonts: Google Fonts - Raleway Online Web Fonts - Monaco
